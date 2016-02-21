@@ -27,6 +27,10 @@
  * @ingroup views_templates
  */
 ?>
+<?php dpm(get_defined_vars()); ?>
+<?php $result_variables = get_defined_vars();
+echo $result_variables['variables']['view']->vid;
+?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -54,7 +58,6 @@
   <?php if ($rows): ?>
     <div class="view-content">
       <?php print $rows; ?>
-      
     </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">
