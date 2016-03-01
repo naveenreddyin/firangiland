@@ -154,3 +154,28 @@ function bartik_field__taxonomy_term_reference($variables) {
 
   return $output;
 }
+
+
+//function bartik_views_pre_render(&$view){
+//  switch ($view->name) {
+//    case 'get_reviews_for_node':
+//      //  override the global custom text field value
+//      dpm($view->field['field_rate_the_resaurant']);
+//      $view->field['field_rate_the_resaurant']->view->result[0]->field_field_rate_the_resaurant[0]['rendered']['average']['#rating'] = 50;
+//      $view->field['field_rate_the_resaurant']->view->result[1]->field_field_rate_the_resaurant[0]['rendered']['average']['#rating'] = 100;
+//
+//      break;
+//  }
+//}
+
+
+
+function bartik_preprocess_page(&$vars) {
+
+  kpr($vars['node']); 
+  if($vars['node']->type == 'restaurant_page'){
+
+    $vars['title'] = false;
+  }
+  
+}

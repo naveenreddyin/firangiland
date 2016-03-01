@@ -27,10 +27,8 @@
  * @ingroup views_templates
  */
 ?>
-<?php dpm(get_defined_vars()); ?>
-<?php $result_variables = get_defined_vars();
-echo $result_variables['variables']['view']->vid;
-?>
+<?php // dpm(get_defined_vars()); ?>
+
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>

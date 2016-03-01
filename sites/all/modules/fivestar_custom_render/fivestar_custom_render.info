@@ -1,0 +1,8 @@
+name = Fivestar Custom Render
+description = Enables fivestar render module to be used with views
+package = Voting
+core = 7.x
+dependencies[] = fivestar
+
+scripts[] = jquery.raty.js
+scripts[] = fivestar_custom_render.js
